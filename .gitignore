@@ -1,4 +1,6 @@
 ML_classes
 **/.idea
+**/__pycache__
+**/venv
 ML_4/dataset
 ML_4/dataset.zip
