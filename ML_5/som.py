@@ -65,7 +65,7 @@ from sklearn.preprocessing import StandardScaler
 sc = StandardScaler()
 customers = sc.fit_transform(customers)
 
-# Part 2 - Now let's make the ANN!
+# Part 2 - ANN!
 from keras.models import Sequential
 from keras.layers import Dense
 
