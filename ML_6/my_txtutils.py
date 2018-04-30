@@ -47,8 +47,8 @@ def convert_from_alphabet(a):
 # unknown = 0
 # tab = 1
 # space = 2
-# all chars from 32 to 225 = c-30
-# LF mapped to 127-30
+# all chars from 32 to 175 = c-30
+# LF mapped to 175-30
 def convert_to_alphabet(c, avoid_tab_and_lf=False):
     """Decode a code point
     :param c: code point
@@ -59,7 +59,7 @@ def convert_to_alphabet(c, avoid_tab_and_lf=False):
         return 32 if avoid_tab_and_lf else 9  # space instead of TAB
     if c == 127 - 30:
         return 92 if avoid_tab_and_lf else 10  # \ instead of LF
-    if 32 <= c + 30 <= 255:
+    if 32 <= c + 30 <= 176 or 224 <= c + 30 <= 241:
         return c + 30
     else:
         return 0  # unknown
